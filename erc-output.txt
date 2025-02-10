@@ -1,0 +1,26 @@
+ERC report (2025-02-10T20:31:52+0000, Encoding UTF8)
+
+***** Sheet /
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Connector_Generic'
+    ; warning
+    @(110.49 mm, 115.57 mm): Symbol J2 [Conn_01x01]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Connector_Generic'
+    ; warning
+    @(110.49 mm, 119.38 mm): Symbol J4 [Conn_01x01]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Connector_Generic'
+    ; warning
+    @(134.62 mm, 115.57 mm): Symbol J1 [Conn_01x03]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Device'
+    ; warning
+    @(125.73 mm, 118.11 mm): Symbol R3 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Device'
+    ; warning
+    @(125.73 mm, 113.03 mm): Symbol R1 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Connector_Generic'
+    ; warning
+    @(110.49 mm, 111.76 mm): Symbol J3 [Conn_01x01]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Device'
+    ; warning
+    @(119.38 mm, 115.57 mm): Symbol R2 [R]
+
+ ** ERC messages: 7  Errors 0  Warnings 7
