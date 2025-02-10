@@ -1,0 +1,31 @@
+name: generate-pcb-output-site
+on:
+  push:
+    branches:
+      - main
+      - ci-testing
+          
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    container: 
+      image: kicad/kicad:nightly-full
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Jobset
+        run: kicad-cli jobset run --file=generate-artifacts.kicad_jobset xh-sr-breakout.kicad_pro
+      - name: Zip Gerbers
+        run: zip -rj generated/gerbers.zip generated/gerbers
+      - name: Remove Unzipped Gerbers
+        run: rm -rf generated/gerbers
+      - name: Push to Branch
+        uses: s0/git-publish-subdir-action@v2.6.0
+        env:
+          REPO: self
+          BRANCH: main-generated-output
+          FOLDER: generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMIT_NAME: github-actions[bot]
+          COMMIT_EMAIL: github-actions[bot]@users.noreply.github.comf
