@@ -1,5 +1,6 @@
 name: generate-pcb-output-site
 on:
+  workflow-dispatch:
   push:
     branches:
       - main
