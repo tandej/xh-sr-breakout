@@ -10,7 +10,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     container: 
-      image: kicad/kicad:nightly-full
+      image: kicad/kicad:9.0
       options: --user root
     steps:
       - name: Checkout
